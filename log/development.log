@@ -1,0 +1,77 @@
+  [1m[35m (104.8ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (163.1ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateTodos (20230315074534)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.6ms)[0m  [1m[35mCREATE TABLE "todos" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar NOT NULL, "description" text NOT NULL, "status" integer DEFAULT 0 NOT NULL, "priority" integer DEFAULT 0 NOT NULL, "created_at" datetime(6) NOT NULL, "updated_at" datetime(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20230315074534"]]
+  [1m[36mTRANSACTION (153.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-03-15 07:57:09.383648"], ["updated_at", "2023-03-15 07:57:09.383648"]]
+  [1m[36mTRANSACTION (83.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTodo Create (0.4ms)[0m  [1m[32mINSERT INTO "todos" ("title", "description", "status", "priority", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Principal Director"], ["description", "Chuck Norris can binary search unsorted data."], ["status", 0], ["priority", 0], ["created_at", "2023-03-15 08:16:01.092592"], ["updated_at", "2023-03-15 08:16:01.092592"]]
+  [1m[36mTRANSACTION (114.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTodo Create (0.4ms)[0m  [1m[32mINSERT INTO "todos" ("title", "description", "status", "priority", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Education Developer"], ["description", "Chuck Norris's beard can type 140 wpm."], ["status", 0], ["priority", 0], ["created_at", "2023-03-15 08:16:01.212450"], ["updated_at", "2023-03-15 08:16:01.212450"]]
+  [1m[36mTRANSACTION (149.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTodo Create (0.6ms)[0m  [1m[32mINSERT INTO "todos" ("title", "description", "status", "priority", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Marketing Producer"], ["description", "Chuck Norris can spawn threads that complete before they are started."], ["status", 0], ["priority", 0], ["created_at", "2023-03-15 08:16:01.368512"], ["updated_at", "2023-03-15 08:16:01.368512"]]
+  [1m[36mTRANSACTION (180.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTodo Create (0.5ms)[0m  [1m[32mINSERT INTO "todos" ("title", "description", "status", "priority", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Global Director"], ["description", "Chuck Norris doesn't pair program."], ["status", 0], ["priority", 0], ["created_at", "2023-03-15 08:16:01.556349"], ["updated_at", "2023-03-15 08:16:01.556349"]]
+  [1m[36mTRANSACTION (116.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTodo Create (0.4ms)[0m  [1m[32mINSERT INTO "todos" ("title", "description", "status", "priority", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Customer Marketing Director"], ["description", "Chuck Norris went out of an infinite loop."], ["status", 0], ["priority", 0], ["created_at", "2023-03-15 08:16:01.678694"], ["updated_at", "2023-03-15 08:16:01.678694"]]
+  [1m[36mTRANSACTION (127.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTodo Create (0.8ms)[0m  [1m[32mINSERT INTO "todos" ("title", "description", "status", "priority", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Real-Estate Executive"], ["description", "Chuck Norris is immutable. If something's going to change, it's going to have to be the rest of the universe."], ["status", 0], ["priority", 0], ["created_at", "2023-03-15 08:16:01.813489"], ["updated_at", "2023-03-15 08:16:01.813489"]]
+  [1m[36mTRANSACTION (122.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTodo Create (0.5ms)[0m  [1m[32mINSERT INTO "todos" ("title", "description", "status", "priority", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "International Community-Services Representative"], ["description", "Chuck Norris doesn't pair program."], ["status", 0], ["priority", 0], ["created_at", "2023-03-15 08:16:01.946050"], ["updated_at", "2023-03-15 08:16:01.946050"]]
+  [1m[36mTRANSACTION (170.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTodo Create (0.4ms)[0m  [1m[32mINSERT INTO "todos" ("title", "description", "status", "priority", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Internal Design Executive"], ["description", "Chuck Norris' keyboard doesn't have a F1 key, the computer asks him for help."], ["status", 0], ["priority", 0], ["created_at", "2023-03-15 08:16:02.122394"], ["updated_at", "2023-03-15 08:16:02.122394"]]
+  [1m[36mTRANSACTION (127.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTodo Create (0.4ms)[0m  [1m[32mINSERT INTO "todos" ("title", "description", "status", "priority", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Advertising Technician"], ["description", "The class object inherits from Chuck Norris."], ["status", 0], ["priority", 0], ["created_at", "2023-03-15 08:16:02.255677"], ["updated_at", "2023-03-15 08:16:02.255677"]]
+  [1m[36mTRANSACTION (116.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTodo Create (0.4ms)[0m  [1m[32mINSERT INTO "todos" ("title", "description", "status", "priority", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Banking Strategist"], ["description", "Chuck Norris can divide by zero."], ["status", 0], ["priority", 0], ["created_at", "2023-03-15 08:16:02.378061"], ["updated_at", "2023-03-15 08:16:02.378061"]]
+  [1m[36mTRANSACTION (187.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTodo Create (0.4ms)[0m  [1m[32mINSERT INTO "todos" ("title", "description", "status", "priority", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Future Executive"], ["description", "Chuck Norris can use GOTO as much as he wants to. Telling him otherwise is considered harmful."], ["status", 0], ["priority", 0], ["created_at", "2023-03-15 08:16:02.571586"], ["updated_at", "2023-03-15 08:16:02.571586"]]
+  [1m[36mTRANSACTION (122.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTodo Create (0.4ms)[0m  [1m[32mINSERT INTO "todos" ("title", "description", "status", "priority", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Farming Strategist"], ["description", "When a bug sees Chuck Norris, it flees screaming in terror, and then immediately self-destructs to avoid being roundhouse-kicked."], ["status", 0], ["priority", 0], ["created_at", "2023-03-15 08:16:02.699354"], ["updated_at", "2023-03-15 08:16:02.699354"]]
+  [1m[36mTRANSACTION (117.1ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTodo Create (0.8ms)[0m  [1m[32mINSERT INTO "todos" ("title", "description", "status", "priority", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Farming Architect"], ["description", "Chuck Norris can access the DB from the UI."], ["status", 0], ["priority", 0], ["created_at", "2023-03-15 08:16:02.822929"], ["updated_at", "2023-03-15 08:16:02.822929"]]
+  [1m[36mTRANSACTION (132.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTodo Create (0.4ms)[0m  [1m[32mINSERT INTO "todos" ("title", "description", "status", "priority", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Internal Architect"], ["description", "Chuck Norris can recite π. Backwards."], ["status", 0], ["priority", 0], ["created_at", "2023-03-15 08:16:02.965840"], ["updated_at", "2023-03-15 08:16:02.965840"]]
+  [1m[36mTRANSACTION (116.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTodo Create (0.3ms)[0m  [1m[32mINSERT INTO "todos" ("title", "description", "status", "priority", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "District Manufacturing Associate"], ["description", "Chuck Norris doesn't have performance bottlenecks. He just makes the universe wait its turn."], ["status", 0], ["priority", 0], ["created_at", "2023-03-15 08:16:03.087622"], ["updated_at", "2023-03-15 08:16:03.087622"]]
+  [1m[36mTRANSACTION (144.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTodo Create (0.4ms)[0m  [1m[32mINSERT INTO "todos" ("title", "description", "status", "priority", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Government Developer"], ["description", "Chuck Norris never gets a syntax error. Instead, the language gets a DoesNotConformToChuck error."], ["status", 0], ["priority", 0], ["created_at", "2023-03-15 08:16:03.237246"], ["updated_at", "2023-03-15 08:16:03.237246"]]
+  [1m[36mTRANSACTION (111.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTodo Create (0.4ms)[0m  [1m[32mINSERT INTO "todos" ("title", "description", "status", "priority", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Legacy Strategist"], ["description", "Chuck Norris programs do not accept input."], ["status", 0], ["priority", 0], ["created_at", "2023-03-15 08:16:03.353836"], ["updated_at", "2023-03-15 08:16:03.353836"]]
+  [1m[36mTRANSACTION (122.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTodo Create (0.4ms)[0m  [1m[32mINSERT INTO "todos" ("title", "description", "status", "priority", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "International Orchestrator"], ["description", "Chuck Norris doesn't believe in floating point numbers because they can't be typed on his binary keyboard."], ["status", 0], ["priority", 0], ["created_at", "2023-03-15 08:16:03.481340"], ["updated_at", "2023-03-15 08:16:03.481340"]]
+  [1m[36mTRANSACTION (133.3ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTodo Create (0.8ms)[0m  [1m[32mINSERT INTO "todos" ("title", "description", "status", "priority", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Healthcare Manager"], ["description", "There is no Esc key on Chuck Norris' keyboard, because no one escapes Chuck Norris."], ["status", 0], ["priority", 0], ["created_at", "2023-03-15 08:16:03.621193"], ["updated_at", "2023-03-15 08:16:03.621193"]]
+  [1m[36mTRANSACTION (122.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[36mTodo Create (0.8ms)[0m  [1m[32mINSERT INTO "todos" ("title", "description", "status", "priority", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["title", "Sales Strategist"], ["description", "All arrays Chuck Norris declares are of infinite size, because Chuck Norris knows no bounds."], ["status", 0], ["priority", 0], ["created_at", "2023-03-15 08:16:03.755316"], ["updated_at", "2023-03-15 08:16:03.755316"]]
+  [1m[36mTRANSACTION (122.1ms)[0m  [1m[36mcommit transaction[0m
