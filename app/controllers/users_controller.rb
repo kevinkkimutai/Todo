@@ -7,6 +7,7 @@ end
 
     def create
         user = User.create(user_params)
+        cookies[:email] = user.email
         render json: { data: user, message: "User created sucessfully"}
     end
 
@@ -16,6 +17,14 @@ end
         user.update(user_params)
         render json: { message: "User updated sucessfully"}
     end
+
+    def login
+        email = params[:email]
+        session[:email] = email
+        render json: {message: "User logged in sucessfully"}
+    end
+    #TODO: logout
+    
 
     private
 

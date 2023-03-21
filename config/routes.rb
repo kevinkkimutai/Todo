@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   put '/update/:id', to: "todos#update"
 
+  post '/login', to: "users#login"
+
   delete '/destroy/:id', to: "todos#destroy"
 
 end
