@@ -888,3 +888,303 @@ Migrating to AddUserToTodo (20230317090214)
   [1m[36mTRANSACTION (87.3ms)[0m  [1m[36mcommit transaction[0m
   [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
   [1m[36mActiveRecord::SchemaMigration Pluck (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/create" for 127.0.0.1 at 2023-03-20 10:41:31 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/create"):
+  
+Started POST "/create" for 127.0.0.1 at 2023-03-20 10:41:42 +0300
+  
+ArgumentError (You need to supply at least one validation):
+  
+app/models/todo.rb:9:in `<class:Todo>'
+app/models/todo.rb:1:in `<main>'
+Started POST "/create" for 127.0.0.1 at 2023-03-20 10:43:18 +0300
+  
+SyntaxError (/home/kevin/Moringa/Rails/morning/Todo/app/models/todo.rb:9: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+...imum:5, maximum:25}, presence :true
+...                              ^
+):
+  
+app/models/todo.rb:9: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+app/models/todo.rb:9: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+app/models/todo.rb:9: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+Started POST "/create" for 127.0.0.1 at 2023-03-20 10:43:26 +0300
+  
+SyntaxError (/home/kevin/Moringa/Rails/morning/Todo/app/models/todo.rb:9: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+...imum:5, maximum:25}, presence :true
+...                              ^
+):
+  
+app/models/todo.rb:9: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+app/models/todo.rb:9: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+app/models/todo.rb:9: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+Started GET "/" for 127.0.0.1 at 2023-03-20 10:45:06 +0300
+  
+SyntaxError (/home/kevin/Moringa/Rails/morning/Todo/app/models/todo.rb:9: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+...imum:5, maximum:25}, presence :true
+...                              ^
+):
+  
+app/models/todo.rb:9: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+app/models/todo.rb:9: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+app/models/todo.rb:9: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+Started GET "/index" for 127.0.0.1 at 2023-03-20 10:45:10 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/index"):
+  
+Started GET "/" for 127.0.0.1 at 2023-03-20 10:45:21 +0300
+  
+SyntaxError (/home/kevin/Moringa/Rails/morning/Todo/app/models/todo.rb:9: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+...imum:5, maximum:25}, presence :true
+...                              ^
+):
+  
+app/models/todo.rb:9: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+app/models/todo.rb:9: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+app/models/todo.rb:9: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+Started GET "/" for 127.0.0.1 at 2023-03-20 10:45:37 +0300
+  
+SyntaxError (/home/kevin/Moringa/Rails/morning/Todo/app/models/todo.rb:9: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+...imum:5, maximum:25}, presence :true
+...                              ^
+):
+  
+app/models/todo.rb:9: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+app/models/todo.rb:9: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+app/models/todo.rb:9: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+Started GET "/" for 127.0.0.1 at 2023-03-20 10:49:32 +0300
+Processing by TodosController#get_todos as */*
+  Parameters: {"title"=>"w", "description"=>"test", "todo"=>{"title"=>"w", "description"=>"test"}}
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:4:in `get_todos'
+Completed 200 OK in 151ms (Views: 49.1ms | ActiveRecord: 2.1ms | Allocations: 22015)
+
+
+Started GET "/create" for 127.0.0.1 at 2023-03-20 10:49:40 +0300
+  
+ActionController::RoutingError (No route matches [GET] "/create"):
+  
+Started POST "/create" for 127.0.0.1 at 2023-03-20 10:50:17 +0300
+Processing by TodosController#create as */*
+  Parameters: {"title"=>"w", "description"=>"test", "todo"=>{"title"=>"w", "description"=>"test"}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :todo. Context: { controller: TodosController, action: create, request: #<ActionDispatch::Request:0x00007fc3a45da830>, params: {"title"=>"w", "description"=>"test", "controller"=>"todos", "action"=>"create", "todo"=>{"title"=>"w", "description"=>"test"}} }[0m
+Completed 500 Internal Server Error in 14ms (ActiveRecord: 1.8ms | Allocations: 3858)
+
+
+  
+NoMethodError (undefined method `includes?' for "w":String
+Did you mean?  include?):
+  
+app/models/todo.rb:14:in `check_title'
+app/controllers/todos_controller.rb:17:in `create'
+Started POST "/create" for 127.0.0.1 at 2023-03-20 10:50:50 +0300
+Processing by TodosController#create as */*
+  Parameters: {"title"=>"w", "description"=>"test", "todo"=>{"title"=>"w", "description"=>"test"}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :todo. Context: { controller: TodosController, action: create, request: #<ActionDispatch::Request:0x00007fc3a4b07bc8>, params: {"title"=>"w", "description"=>"test", "controller"=>"todos", "action"=>"create", "todo"=>{"title"=>"w", "description"=>"test"}} }[0m
+Completed 200 OK in 564ms (Views: 549.1ms | ActiveRecord: 1.4ms | Allocations: 351800)
+
+
+Started POST "/create" for 127.0.0.1 at 2023-03-20 10:52:24 +0300
+Processing by TodosController#create as */*
+  Parameters: {"title"=>"", "description"=>"test", "todo"=>{"title"=>"", "description"=>"test"}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :todo. Context: { controller: TodosController, action: create, request: #<ActionDispatch::Request:0x00007fc3a464cc50>, params: {"title"=>"", "description"=>"test", "controller"=>"todos", "action"=>"create", "todo"=>{"title"=>"", "description"=>"test"}} }[0m
+Completed 200 OK in 7ms (Views: 3.6ms | ActiveRecord: 0.0ms | Allocations: 1853)
+
+
+Started POST "/create" for 127.0.0.1 at 2023-03-20 10:53:37 +0300
+  
+SyntaxError (/home/kevin/Moringa/Rails/morning/Todo/app/models/todo.rb:9: syntax error, unexpected '\n', expecting =>):
+  
+app/models/todo.rb:9: syntax error, unexpected '\n', expecting =>
+app/models/todo.rb:9: syntax error, unexpected '\n', expecting =>
+app/models/todo.rb:9: syntax error, unexpected '\n', expecting =>
+Started POST "/create" for 127.0.0.1 at 2023-03-20 10:53:50 +0300
+Processing by TodosController#create as */*
+  Parameters: {"title"=>"", "description"=>"test", "todo"=>{"title"=>"", "description"=>"test"}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :todo. Context: { controller: TodosController, action: create, request: #<ActionDispatch::Request:0x00007fc3940ae628>, params: {"title"=>"", "description"=>"test", "controller"=>"todos", "action"=>"create", "todo"=>{"title"=>"", "description"=>"test"}} }[0m
+Completed 200 OK in 12ms (Views: 1.8ms | ActiveRecord: 1.8ms | Allocations: 3636)
+
+
+Started GET "/" for 127.0.0.1 at 2023-03-20 11:12:50 +0300
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by TodosController#get_todos as */*
+  Parameters: {"title"=>"", "description"=>"test", "todo"=>{"title"=>"", "description"=>"test"}}
+  [1m[36mTodo Load (0.5ms)[0m  [1m[34mSELECT "todos".* FROM "todos"[0m
+  ↳ app/controllers/todos_controller.rb:4:in `get_todos'
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (12.43ms)
+Completed 200 OK in 172ms (Views: 161.2ms | ActiveRecord: 2.3ms | Allocations: 24706)
+
+
+Started POST "/create" for 127.0.0.1 at 2023-03-20 11:13:34 +0300
+Processing by TodosController#create as */*
+  Parameters: {"title"=>"", "description"=>"test", "todo"=>{"title"=>"", "description"=>"test"}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :todo. Context: { controller: TodosController, action: create, request: #<ActionDispatch::Request:0x00007fbe1c0395f8>, params: {"title"=>"", "description"=>"test", "controller"=>"todos", "action"=>"create", "todo"=>{"title"=>"", "description"=>"test"}} }[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with ActiveModel::Errors (394.12ms)
+Completed 200 OK in 402ms (Views: 397.9ms | ActiveRecord: 0.0ms | Allocations: 353234)
+
+
+Started POST "/create" for 127.0.0.1 at 2023-03-20 11:13:51 +0300
+Processing by TodosController#create as */*
+  Parameters: {"title"=>"asasas.", "description"=>"testssws feef fefef fefeef efefef", "todo"=>{"title"=>"asasas.", "description"=>"testssws feef fefef fefeef efefef"}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :todo. Context: { controller: TodosController, action: create, request: #<ActionDispatch::Request:0x00007fbe30018718>, params: {"title"=>"asasas.", "description"=>"testssws feef fefef fefeef efefef", "controller"=>"todos", "action"=>"create", "todo"=>{"title"=>"asasas.", "description"=>"testssws feef fefef fefeef efefef"}} }[0m
+[active_model_serializers] Rendered ActiveModel::Serializer::Null with ActiveModel::Errors (1.12ms)
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.0ms | Allocations: 1218)
+
+
+Started POST "/create" for 127.0.0.1 at 2023-03-20 11:14:02 +0300
+Processing by TodosController#create as */*
+  Parameters: {"title"=>"asasas.", "description"=>"testssws feef fefef fefeef efssssssssssefef", "todo"=>{"title"=>"asasas.", "description"=>"testssws feef fefef fefeef efssssssssssefef"}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :todo. Context: { controller: TodosController, action: create, request: #<ActionDispatch::Request:0x00007fbe28018e28>, params: {"title"=>"asasas.", "description"=>"testssws feef fefef fefeef efssssssssssefef", "controller"=>"todos", "action"=>"create", "todo"=>{"title"=>"asasas.", "description"=>"testssws feef fefef fefeef efssssssssssefef"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/todos_controller.rb:17:in `create'
+  [1m[36mTodo Create (0.6ms)[0m  [1m[32mINSERT INTO "todos" ("title", "description", "status", "priority", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "asasas."], ["description", "testssws feef fefef fefeef efssssssssssefef"], ["status", 0], ["priority", 0], ["created_at", "2023-03-20 08:14:02.046321"], ["updated_at", "2023-03-20 08:14:02.046321"], ["user_id", 1]]
+  ↳ app/controllers/todos_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (259.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/todos_controller.rb:17:in `create'
+[active_model_serializers] Rendered TodoSerializer with ActiveModelSerializers::Adapter::Attributes (0.34ms)
+Completed 200 OK in 274ms (Views: 1.3ms | ActiveRecord: 259.9ms | Allocations: 3163)
+
+
+Started POST "/create" for 127.0.0.1 at 2023-03-20 11:14:33 +0300
+Processing by TodosController#create as */*
+  Parameters: {"title"=>"asasas.", "description"=>"testssws feef fefef fefeef efssssssssssefef", "todo"=>{"title"=>"asasas.", "description"=>"testssws feef fefef fefeef efssssssssssefef"}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :todo. Context: { controller: TodosController, action: create, request: #<ActionDispatch::Request:0x00007fbe200eaca0>, params: {"title"=>"asasas.", "description"=>"testssws feef fefef fefeef efssssssssssefef", "controller"=>"todos", "action"=>"create", "todo"=>{"title"=>"asasas.", "description"=>"testssws feef fefef fefeef efssssssssssefef"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/todos_controller.rb:17:in `create'
+  [1m[36mTodo Create (0.6ms)[0m  [1m[32mINSERT INTO "todos" ("title", "description", "status", "priority", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "asasas."], ["description", "testssws feef fefef fefeef efssssssssssefef"], ["status", 0], ["priority", 0], ["created_at", "2023-03-20 08:14:33.309001"], ["updated_at", "2023-03-20 08:14:33.309001"], ["user_id", 1]]
+  ↳ app/controllers/todos_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (87.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/todos_controller.rb:17:in `create'
+[active_model_serializers] Rendered TodoSerializer with ActiveModelSerializers::Adapter::Attributes (0.76ms)
+Completed 200 OK in 110ms (Views: 5.5ms | ActiveRecord: 90.6ms | Allocations: 4164)
+
+
+Started POST "/create" for 127.0.0.1 at 2023-03-20 11:14:49 +0300
+Processing by TodosController#create as */*
+  Parameters: {"title"=>"asasas.", "description"=>"testssws feef fefef fefeef efssssssssssefef", "todo"=>{"title"=>"asasas.", "description"=>"testssws feef fefef fefeef efssssssssssefef"}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :todo. Context: { controller: TodosController, action: create, request: #<ActionDispatch::Request:0x00007fbe24e29f70>, params: {"title"=>"asasas.", "description"=>"testssws feef fefef fefeef efssssssssssefef", "controller"=>"todos", "action"=>"create", "todo"=>{"title"=>"asasas.", "description"=>"testssws feef fefef fefeef efssssssssssefef"}} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/todos_controller.rb:17:in `create'
+  [1m[36mTodo Create (0.6ms)[0m  [1m[32mINSERT INTO "todos" ("title", "description", "status", "priority", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "asasas."], ["description", "testssws feef fefef fefeef efssssssssssefef"], ["status", 0], ["priority", 0], ["created_at", "2023-03-20 08:14:49.279071"], ["updated_at", "2023-03-20 08:14:49.279071"], ["user_id", 1]]
+  ↳ app/controllers/todos_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (156.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/todos_controller.rb:17:in `create'
+[active_model_serializers] Rendered TodoSerializer with ActiveModelSerializers::Adapter::Attributes (0.55ms)
+Completed 200 OK in 178ms (Views: 4.1ms | ActiveRecord: 159.3ms | Allocations: 4138)
+
+
+Started POST "/create" for 127.0.0.1 at 2023-03-20 11:15:37 +0300
+Processing by TodosController#create as */*
+  Parameters: {"title"=>"asasas.", "description"=>"testssws feef fefef fefeef efssssssssssefef", "todo"=>{"title"=>"asasas.", "description"=>"testssws feef fefef fefeef efssssssssssefef"}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :todo. Context: { controller: TodosController, action: create, request: #<ActionDispatch::Request:0x00007fbe1d78afb8>, params: {"title"=>"asasas.", "description"=>"testssws feef fefef fefeef efssssssssssefef", "controller"=>"todos", "action"=>"create", "todo"=>{"title"=>"asasas.", "description"=>"testssws feef fefef fefeef efssssssssssefef"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/todos_controller.rb:17:in `create'
+  [1m[36mTodo Create (0.6ms)[0m  [1m[32mINSERT INTO "todos" ("title", "description", "status", "priority", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "asasas."], ["description", "testssws feef fefef fefeef efssssssssssefef"], ["status", 0], ["priority", 0], ["created_at", "2023-03-20 08:15:37.848202"], ["updated_at", "2023-03-20 08:15:37.848202"], ["user_id", 1]]
+  ↳ app/controllers/todos_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (102.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/todos_controller.rb:17:in `create'
+[active_model_serializers] Rendered TodoSerializer with ActiveModelSerializers::Adapter::Attributes (0.65ms)
+Completed 200 OK in 121ms (Views: 3.9ms | ActiveRecord: 106.1ms | Allocations: 4161)
+
+
+Started POST "/create" for 127.0.0.1 at 2023-03-20 11:16:06 +0300
+Processing by TodosController#create as */*
+  Parameters: {"title"=>"asasas.", "description"=>"testssws feef fefef fefeef efssssssssssefef", "todo"=>{"title"=>"asasas.", "description"=>"testssws feef fefef fefeef efssssssssssefef"}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :todo. Context: { controller: TodosController, action: create, request: #<ActionDispatch::Request:0x00007fbe301319d8>, params: {"title"=>"asasas.", "description"=>"testssws feef fefef fefeef efssssssssssefef", "controller"=>"todos", "action"=>"create", "todo"=>{"title"=>"asasas.", "description"=>"testssws feef fefef fefeef efssssssssssefef"}} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/todos_controller.rb:17:in `create'
+  [1m[36mTodo Create (1.2ms)[0m  [1m[32mINSERT INTO "todos" ("title", "description", "status", "priority", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "asasas."], ["description", "testssws feef fefef fefeef efssssssssssefef"], ["status", 0], ["priority", 0], ["created_at", "2023-03-20 08:16:07.004123"], ["updated_at", "2023-03-20 08:16:07.004123"], ["user_id", 1]]
+  ↳ app/controllers/todos_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (101.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/todos_controller.rb:17:in `create'
+[active_model_serializers] Rendered TodoSerializer with ActiveModelSerializers::Adapter::Attributes (1.45ms)
+Completed 200 OK in 128ms (Views: 4.9ms | ActiveRecord: 105.0ms | Allocations: 4183)
+
+
+Started POST "/create" for 127.0.0.1 at 2023-03-20 11:19:11 +0300
+Processing by TodosController#create as */*
+  Parameters: {"title"=>"asasas.", "description"=>"testssws feef fefef fefeef efssssssssssefef", "todo"=>{"title"=>"asasas.", "description"=>"testssws feef fefef fefeef efssssssssssefef"}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :todo. Context: { controller: TodosController, action: create, request: #<ActionDispatch::Request:0x00007fbe28169278>, params: {"title"=>"asasas.", "description"=>"testssws feef fefef fefeef efssssssssssefef", "controller"=>"todos", "action"=>"create", "todo"=>{"title"=>"asasas.", "description"=>"testssws feef fefef fefeef efssssssssssefef"}} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/todos_controller.rb:17:in `create'
+  [1m[36mTodo Create (0.5ms)[0m  [1m[32mINSERT INTO "todos" ("title", "description", "status", "priority", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "asasas."], ["description", "testssws feef fefef fefeef efssssssssssefef"], ["status", 0], ["priority", 0], ["created_at", "2023-03-20 08:19:11.168879"], ["updated_at", "2023-03-20 08:19:11.168879"], ["user_id", 1]]
+  ↳ app/controllers/todos_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (128.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/todos_controller.rb:17:in `create'
+[active_model_serializers] Rendered TodoSerializer with ActiveModelSerializers::Adapter::Attributes (0.74ms)
+Completed 200 OK in 147ms (Views: 3.3ms | ActiveRecord: 131.4ms | Allocations: 4203)
+
+
+Started POST "/create" for 127.0.0.1 at 2023-03-20 11:19:19 +0300
+Processing by TodosController#create as */*
+  Parameters: {"title"=>"asasas.", "description"=>"testssws feef fefef fefeef efssssssssssefef", "todo"=>{"title"=>"asasas.", "description"=>"testssws feef fefef fefeef efssssssssssefef"}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :todo. Context: { controller: TodosController, action: create, request: #<ActionDispatch::Request:0x00007fbe2016cc00>, params: {"title"=>"asasas.", "description"=>"testssws feef fefef fefeef efssssssssssefef", "controller"=>"todos", "action"=>"create", "todo"=>{"title"=>"asasas.", "description"=>"testssws feef fefef fefeef efssssssssssefef"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/todos_controller.rb:17:in `create'
+  [1m[36mTodo Create (0.6ms)[0m  [1m[32mINSERT INTO "todos" ("title", "description", "status", "priority", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "asasas."], ["description", "testssws feef fefef fefeef efssssssssssefef"], ["status", 0], ["priority", 0], ["created_at", "2023-03-20 08:19:19.934906"], ["updated_at", "2023-03-20 08:19:19.934906"], ["user_id", 1]]
+  ↳ app/controllers/todos_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (115.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/todos_controller.rb:17:in `create'
+[active_model_serializers] Rendered TodoSerializer with ActiveModelSerializers::Adapter::Attributes (0.78ms)
+Completed 200 OK in 130ms (Views: 3.0ms | ActiveRecord: 116.5ms | Allocations: 2125)
+
+
+Started POST "/create" for 127.0.0.1 at 2023-03-20 11:19:21 +0300
+Processing by TodosController#create as */*
+  Parameters: {"title"=>"asasas.", "description"=>"testssws feef fefef fefeef efssssssssssefef", "todo"=>{"title"=>"asasas.", "description"=>"testssws feef fefef fefeef efssssssssssefef"}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :todo. Context: { controller: TodosController, action: create, request: #<ActionDispatch::Request:0x00007fbe24e85640>, params: {"title"=>"asasas.", "description"=>"testssws feef fefef fefeef efssssssssssefef", "controller"=>"todos", "action"=>"create", "todo"=>{"title"=>"asasas.", "description"=>"testssws feef fefef fefeef efssssssssssefef"}} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/todos_controller.rb:17:in `create'
+  [1m[36mTodo Create (0.8ms)[0m  [1m[32mINSERT INTO "todos" ("title", "description", "status", "priority", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "asasas."], ["description", "testssws feef fefef fefeef efssssssssssefef"], ["status", 0], ["priority", 0], ["created_at", "2023-03-20 08:19:21.822941"], ["updated_at", "2023-03-20 08:19:21.822941"], ["user_id", 1]]
+  ↳ app/controllers/todos_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (97.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/todos_controller.rb:17:in `create'
+[active_model_serializers] Rendered TodoSerializer with ActiveModelSerializers::Adapter::Attributes (0.71ms)
+Completed 200 OK in 110ms (Views: 1.8ms | ActiveRecord: 98.4ms | Allocations: 2125)
+
+
+Started POST "/create" for 127.0.0.1 at 2023-03-20 11:19:22 +0300
+Processing by TodosController#create as */*
+  Parameters: {"title"=>"asasas.", "description"=>"testssws feef fefef fefeef efssssssssssefef", "todo"=>{"title"=>"asasas.", "description"=>"testssws feef fefef fefeef efssssssssssefef"}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :todo. Context: { controller: TodosController, action: create, request: #<ActionDispatch::Request:0x00007fbe1c5da0e8>, params: {"title"=>"asasas.", "description"=>"testssws feef fefef fefeef efssssssssssefef", "controller"=>"todos", "action"=>"create", "todo"=>{"title"=>"asasas.", "description"=>"testssws feef fefef fefeef efssssssssssefef"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/todos_controller.rb:17:in `create'
+  [1m[36mTodo Create (0.7ms)[0m  [1m[32mINSERT INTO "todos" ("title", "description", "status", "priority", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "asasas."], ["description", "testssws feef fefef fefeef efssssssssssefef"], ["status", 0], ["priority", 0], ["created_at", "2023-03-20 08:19:22.501884"], ["updated_at", "2023-03-20 08:19:22.501884"], ["user_id", 1]]
+  ↳ app/controllers/todos_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (165.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/todos_controller.rb:17:in `create'
+[active_model_serializers] Rendered TodoSerializer with ActiveModelSerializers::Adapter::Attributes (0.72ms)
+Completed 200 OK in 176ms (Views: 1.8ms | ActiveRecord: 166.1ms | Allocations: 2125)
+
+
+Started POST "/create" for 127.0.0.1 at 2023-03-20 11:19:25 +0300
+Processing by TodosController#create as */*
+  Parameters: {"title"=>"asasas.", "description"=>"testssws feef fefef fefeef efssssssssssefef", "todo"=>{"title"=>"asasas.", "description"=>"testssws feef fefef fefeef efssssssssssefef"}}
+Can't verify CSRF token authenticity.
+[31mUnpermitted parameter: :todo. Context: { controller: TodosController, action: create, request: #<ActionDispatch::Request:0x00007fbe30062a70>, params: {"title"=>"asasas.", "description"=>"testssws feef fefef fefeef efssssssssssefef", "controller"=>"todos", "action"=>"create", "todo"=>{"title"=>"asasas.", "description"=>"testssws feef fefef fefeef efssssssssssefef"}} }[0m
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/todos_controller.rb:17:in `create'
+  [1m[36mTodo Create (0.5ms)[0m  [1m[32mINSERT INTO "todos" ("title", "description", "status", "priority", "created_at", "updated_at", "user_id") VALUES (?, ?, ?, ?, ?, ?, ?)[0m  [["title", "asasas."], ["description", "testssws feef fefef fefeef efssssssssssefef"], ["status", 0], ["priority", 0], ["created_at", "2023-03-20 08:19:25.671115"], ["updated_at", "2023-03-20 08:19:25.671115"], ["user_id", 1]]
+  ↳ app/controllers/todos_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (138.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/todos_controller.rb:17:in `create'
+[active_model_serializers] Rendered TodoSerializer with ActiveModelSerializers::Adapter::Attributes (0.68ms)
+Completed 200 OK in 150ms (Views: 1.6ms | ActiveRecord: 138.7ms | Allocations: 2087)
+
+
